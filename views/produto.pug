@@ -1,0 +1,16 @@
+extends app.pug
+//-para escrever comentarios em paginas herdadas, preciso colocar o -
+block titulo 
+    title Lista de produtos
+block h1PaginaInicial
+    h1 Lista de produtos 
+block conteudo
+    table
+        thead 
+            tr 
+                th(scope='col') Produto 
+                th(scope='col') Descrição
+        tbody 
+            tr 
+                td #{produtoParaView.nome}
+                td #{produtoParaView.descricao}

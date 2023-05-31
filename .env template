@@ -1,0 +1,7 @@
+#exemplo de como seria um arquivo .env principal (que deveria ser chamado .env e estar na root do projeto), que vai armazenar variaveis de ambiente, como porta usada, senha e usuario do BD, etc
+#se em outra maquina eu quisesse mudar esses valores, bastaria mudar no arquivo .env que você deve criar
+PORT=
+DB_NAME=
+DB_USER=
+DB_PASSWORD=
+DB_HOST=

@@ -1,0 +1,27 @@
+extends app.pug
+block titulo
+    title Cliente #{client.name}
+block h1PaginaInicial
+    h1 Detalhes do cliente
+block obsEmVermelhoAbaixoDoH1
+    p(style='color:red') Detalhes do cliente obtidos a partir da conexão com um BD mysql, com tabelas criadas por essa aplicação usando o framework express
+block conteudo
+        .card
+            h5.card-header Detalhes do(a) cliente #{client.name}
+            .card-body 
+                p 
+                    strong ID:
+                    | #{client.id}
+                p 
+                    strong Name: 
+                    | #{client.name}
+                p 
+                    strong Email: 
+                    | #{client.email}
+                p 
+                    strong Data de criação: 
+                    | #{client.createdAt}
+                p 
+                    strong Data de atualização: 
+                    | #{client.updatedAt}
+                a(href="/clients").btn.btn-success Voltar para a lista

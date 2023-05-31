@@ -1,0 +1,17 @@
+extends app.pug
+//-pag que vai permitir inserir novos itens no BD
+block titulo 
+    title Cadastrar novo cliente
+block h1PaginaInicial
+    h1 Cadastrar novo cliente
+block obsEmVermelhoAbaixoDoH1
+    p(style='color:red') Quando formos cadastrar novo cliente, faremos uma conexão com um BD mysql, com tabelas criadas por essa aplicação usando o framework express
+block conteudo
+    form(action="/clients/" method="post")
+        .mb-3
+            label.form-label(for="name") Nome:
+            input#name.form-control(type="text" value="" name="name" placeholder="digite o nome" required)
+        .mb-3
+            label.form-label(for="email") Email:
+            input#email.form-control(type="email" value="" name="email" placeholder="digite o email" required)
+        button.btn.btn-success(type="submit" value="submit") Enviar
